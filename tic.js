@@ -47,6 +47,8 @@ function winner() {
     if (flag == true) {
       for (var j = 0; j < 9; j++) {
         document.getElementById(j).disabled = true;
+        // document.getElementById("undo").disabled=true;
+        document.getElementById("undo").style.display = "none";
       }
       document.getElementById(win[i][0].toString()).style.backgroundColor =
         "green";
@@ -61,26 +63,31 @@ function winner() {
 function reset() {
   count = 0;
   board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
   for (var i = 0; i < 9; i++) {
     document.getElementById("wintag").innerHTML = "";
     document.getElementById(i).innerHTML = "";
     document.getElementById(i).disabled = false;
     document.getElementById(i.toString()).style.backgroundColor = "crimson";
   }
+  if (flag == true) {
+    document.getElementById("undo").style.display = "block";
+    flag = false;
+  }
 }
-// function undo() {
-//   count--;
-//   if (count == -1) {
-//     alert("No undo moves available");
-//     count++;
-//     return;
-//   }
-//   i = undobox[count];
-//   board[i] = 0;
-//   document.getElementById(i).innerHTML = "";
-//   document.getElementById(i).disabled = false;
-//   document.getElementById("wintag").innerHTML = "";
-//   for (var j = 0; j < 9; j++) {
-//     document.getElementById(j.toString()).style.backgroundColor = "crimson";
-//   }
-// }
+function undo() {
+  count--;
+  if (count == -1) {
+    alert("No undo moves available");
+    count++;
+    return;
+  }
+  i = undobox[count];
+  board[i] = 0;
+  document.getElementById(i).innerHTML = "";
+  document.getElementById(i).disabled = false;
+  document.getElementById("wintag").innerHTML = "";
+  for (var j = 0; j < 9; j++) {
+    document.getElementById(j.toString()).style.backgroundColor = "crimson";
+  }
+}

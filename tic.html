@@ -12,17 +12,44 @@
     <h1>
         <center>Tic Tac Toe</center>
     </h1>
+    <center>
+        <p id="wintag"></p>
+    </center>
     <div class="box">
-        <div class="cell" id="0"></div>
-        <div class="cell" id="1"></div>
-        <div class="cell" id="2"></div>
-        <div class="cell" id="3"></div>
-        <div class="cell" id="4"></div>
-        <div class="cell" id="5"></div>
-        <div class="cell" id="6"></div>
-        <div class="cell" id="7"></div>
-        <div class="cell" id="8"></div>
+        <button class="cell" id="0" value="0" onclick="check(this)">
+            <p id="0"></p>
+        </button>
+        <button class="cell" id="1" value="1" onclick="check(this)">
+            <p id="1"></p>
+        </button>
+        <button class="cell" id="2" value="2" onclick="check(this)">
+            <p id="2"></p>
+        </button>
+        <button class="cell" id="3" value="3" onclick="check(this)">
+            <p id="3"></p>
+        </button>
+        <button class="cell" id="4" value="4" onclick="check(this)">
+            <p id="4"></p>
+        </button>
+        <button class="cell" id="5" value="5" onclick="check(this)">
+            <p id="5"></p>
+        </button>
+        <button class="cell" id="6" value="6" onclick="check(this)">
+            <p id="6"></p>
+        </button>
+        <button class="cell" id="7" value="7" onclick="check(this)">
+            <p id="7"></p>
+        </button>
+        <button class="cell" id="8" value="8" onclick="check(this)">
+            <p id="8"></p>
+        </button>
     </div>
+    <div id="option">
+        <button id="undo" onclick="undo()">undo</button>
+        <button id="reset" onclick="reset()">reset</button>
+    </div>
+    <script src="tic.js">
+    </script>
 </body>
 
 </html>

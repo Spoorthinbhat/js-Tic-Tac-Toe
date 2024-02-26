@@ -1,26 +1,59 @@
-body{
-    padding:0px;
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+body {
+  padding: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.box{
-    margin: auto;
-    justify-content:center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    width:37em;
-    height:32em;
-    align-content: flex-start;
-
+.box {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 37em;
+  height: 32em;
+  align-content: flex-start;
 }
-.cell{
-    background-color: crimson;
-    width:32%;
-    height:32%;
-    flex-basis: 32%;
-    margin: 2px;
-  
+.cell {
+  font-size: 6em;
+  background-color: crimson;
+  width: 32%;
+  height: 32%;
+  flex-basis: 32%;
+  margin: 2px;
+}
+#reset {
+  width: 15%;
+  height: 100%;
+  background-color: red;
+  color: white;
+  border: 3px solid black;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+#undo {
+  width: 15%;
+  height: 100%;
+  color: white;
+  background-color: rgb(12, 29, 125);
+  border: 3px solid black;
+  font-size: 1.2em;
+}
+button:disabled {
+  color: black;
+}
+h1 {
+  margin-bottom: 6px;
+}
+#wintag {
+  color: rgb(83, 179, 27);
+  font-size: 2em;
+  font-weight: 800;
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+#option {
+  display: flex;
+  justify-content: center;
 }
